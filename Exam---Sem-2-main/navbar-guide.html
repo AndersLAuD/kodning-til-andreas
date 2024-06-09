@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap icon CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Link til eget stylesheet -->
+    <link rel="stylesheet" href="bootstrap-style.css">
+    <!-- Link til google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+    <title>Girlcode</title>
+  </head>
+  <body>
+
+    <!-- NAVBAR SECTION -->
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><img style="width: 20lvh;" src="images/logo.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a id="navbar_home" class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Guides</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a id="navbar_navbar" class="dropdown-item" href="navbar-guide.html">Navigation bar</a></li>
+                  <li><a id="navbar_carousel" class="dropdown-item" href="carousel-guide.html">Carousel</a></li>
+                  <li><a id="navbar_hosting" class="dropdown-item" href="hosting-guide.html">Hosting</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a id="navbar_other" class="dropdown-item" href="index.html">Other guides</a></li>
+                </ul>
+              <li class="nav-item">
+                <a id="navbar_about" class="nav-link active" aria-current="page" href="about.html">About us</a>
+              </li>
+
+              <button class="lang-button-eng mx-1" onclick="changeLanguage('en')"></button>
+              <button class="lang-button-dk mx-1" onclick="changeLanguage('dk')"></button>
+              
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+      <!-- HEADLINE SECTION -->
+
+      <div class="container mt-5 mb-5">
+        <h1 class="text-center mb-5">NAVIGATION BAR</h1>
+        <p>Welcome to our comprehensive guide on coding a navigation bar! Navigation bars are a fundamental part of web design, providing users with an intuitive way to explore your site. In this tutorial, we'll dive into the different types of navigation bars, their importance, and step-by-step instructions on creating them from scratch</p>
+    </div>
+
+      <!-- ELABORATION SECTION 1 -->
+
+      <div class="container mb-5">
+        <h1 class="text-center">ELABORATION</h1>
+
+        <!-- NAVBAR GUIDE -->
+
+        <h3 class="mt-5">Basic Structure:</h3>
+        <p>A navigation bar, or navbar, is typically a collection of links guiding users to various sections of a website. Here's the basic HTML structure for a simple navigation bar:</p>
+
+        <div class="code_container container mb-5 rounded-3">
+            <div style="padding-bottom:28%; position:relative; display:block; width: 100%">
+                <iframe width="100%" height="100%" frameborder="0" style="position:absolute; top:0; left:0" src="https://carbon.now.sh/embed?bg=rgba%28255%2C233%2C236%2C1%29&t=seti&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%2520%2520%2520%2520%253C%21--%2520Basic%2520Structure%2520%28This%2520is%2520placed%2520inside%2520body%29%2520--%253E%250A%2520%2520%2520%2520%253Cnav%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cul%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cli%253E%253Ca%2520href%253D%2522%2523home%2522%253EHome%253C%252Fa%253E%253C%252Fli%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cli%253E%253Ca%2520href%253D%2522%2523about%2522%253EAbout%253C%252Fa%253E%253C%252Fli%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cli%253E%253Ca%2520href%253D%2522%2523services%2522%253EServices%253C%252Fa%253E%253C%252Fli%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cli%253E%253Ca%2520href%253D%2522%2523contact%2522%253EContact%253C%252Fa%253E%253C%252Fli%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Ful%253E%250A%2520%2520%2520%2520%253C%252Fnav%253E"
+                    style="border:0; transform: scale(1); overflow:hidden;"
+                    sandbox="allow-scripts allow-same-origin">
+                </iframe>
+              </div>
+        </div>
+
+        <p>
+          <ul>
+          <li><code>&lt;nav&gt;</code> tag: Defines the navigation section.</li>
+          <li><code>&lt;ul&gt;</code> tag: Represents an unordered list of links.</li>
+          <li><code>&lt;li&gt;</code> tag: Each list item within the unordered list.</li>
+          <li><code>&lt;a&gt;</code>; tag: Anchor tags represent the actual links.</li>
+          </ul>
+          </p>
+
+          <!-- Navbar-guide Styling the Navbar-->
+
+            <h3 class="mt-5">Styling the Navbar</h3>
+            <p>Styling the navigation bar is crucial for making it visually appealing and user-friendly. Below is a basic CSS example to style the navbar:</p>
+            
+            <div class="code_container container mb-5 rounded-3">
+                <div style="padding-bottom:48%; position:relative; display:block; width: 100%">
+                    <iframe width="100%" height="100%" frameborder="0" style="position:absolute; top:0; left:0" src="https://carbon.now.sh/embed?bg=rgba%28255%2C233%2C236%2C1%29&t=seti&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%252F*%2520Styling%2520the%2520navigaton%2520bar%2520*%252F%250Anav%2520%257B%250A%2520%2520%2520%2520background-color%253A%2520%2523333%253B%250A%257D%250Anav%2520ul%2520%257B%250A%2520%2520%2520%2520list-style-type%253A%2520none%253B%250A%2520%2520%2520%2520margin%253A%25200%253B%250A%2520%2520%2520%2520padding%253A%25200%253B%250A%2520%2520%2520%2520overflow%253A%2520hidden%253B%250A%257D%250Anav%2520ul%2520li%2520%257B%250A%2520%2520%2520%2520float%253A%2520left%253B%250A%257D%250Anav%2520ul%2520li%2520a%2520%257B%250A%2520%2520%2520%2520display%253A%2520block%253B%250A%2520%2520%2520%2520color%253A%2520white%253B%250A%2520%2520%2520%2520text-align%253A%2520center%253B%250A%2520%2520%2520%2520padding%253A%252014px%252016px%253B%250A%2520%2520%2520%2520text-decoration%253A%2520none%253B%250A%257D%250Anav%2520ul%2520li%2520a%253Ahover%2520%257B%250A%2520%2520%2520%2520background-color%253A%2520%2523111%253B%250A%257D"
+                        style="border:0; transform: scale(1); overflow:hidden;"
+                        sandbox="allow-scripts allow-same-origin">
+                    </iframe>
+                  </div>
+            </div>
+
+            <p>
+              <ul>
+                  <li><code>background-color</code>: Sets the background color of the navigation bar.</li>
+                  <li><code>list-style-type</code>: Removes default list styling.</li>
+                  <li><code>overflow: hidden</code>: Ensures the content stays within the navbar.</li>
+                  <li><code>float: left</code>: Aligns the list items horizontally.</li>
+                  <li><code>text-align: center</code>: Centers the text within each link.</li>
+                  <li><code>:hover</code>: Changes the background color when the user hovers over a link.</li>
+              </ul>
+          </p>
+
+          <!-- Navbar-guide Responsive Design-->
+
+          <h3 class="mt-5">Responsive Design</h3>
+          <p>A responsive navigation bar adapts to different screen sizes, enhancing the user experience across devices. Media queries are used to achieve this:</p>
+
+          <div class="code_container container mb-5 rounded-3">
+            <div style="padding-bottom:23%; position:relative; display:block; width: 100%">
+                <iframe width="100%" height="100%" frameborder="0" style="position:absolute; top:0; left:0" src="https://carbon.now.sh/embed?bg=rgba%28255%2C233%2C236%2C1%29&t=seti&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%252F*%2520Responsive%2520design%2520*%252F%250A%2540media%2520screen%2520and%2520%28max-width%253A%2520600px%29%2520%257B%250A%2520%2520%2520%2520nav%2520ul%2520li%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520float%253A%2520none%253B%250A%2520%2520%2520%2520%257D%250A%257D"
+                    style="border:0; transform: scale(1); overflow:hidden;"
+                    sandbox="allow-scripts allow-same-origin">
+                </iframe>
+            </div>
+          </div>
+
+          <ul>
+            <li><code>@media screen and (max-width: 600px)</code>: Applies styles for screens 600px wide or smaller.</li>
+            <li><code>float: none</code>: Stacks the menu items vertically on smaller screens.</li>
+        </ul>
+
+        <!-- Navbar-guide Advanced Features-->
+
+        <h3 class="mt-5">Advanced Features</h3>
+        <p>Enhance your navigation bar with dropdown menus for a more interactive experience.</p>
+        <p>HTML for Dropdown</p>
+        
+        <div class="code_container container mb-5 rounded-3">
+            <div style="padding-bottom:43%; position:relative; display:block; width: 100%">
+                <iframe width="100%" height="100%" frameborder="0" style="position:absolute; top:0; left:0" src="https://carbon.now.sh/embed?bg=rgba%28255%2C233%2C236%2C1%29&t=seti&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%21--%2520Basic%2520Structure%2520%28This%2520is%2520placed%2520inside%2520body%29%2520--%253E%250A%2520%2520%2520%2520%253Cnav%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cul%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cli%253E%253Ca%2520href%253D%2522%2523home%2522%253EHome%253C%252Fa%253E%253C%252Fli%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cli%253E%253Ca%2520href%253D%2522%2523about%2522%253EAbout%253C%252Fa%253E%253C%252Fli%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cli%253E%253Ca%2520href%253D%2522%2523services%2522%253EServices%253C%252Fa%253E%253C%252Fli%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cli%253E%253Ca%2520href%253D%2522%2523contact%2522%253EContact%253C%252Fa%253E%253C%252Fli%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Ful%253E%250A%2520%2520%2520%2520%253C%252Fnav%253E%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520%253C%21--%2520Html%2520for%2520Dropdown%2520%28This%2520is%2520placed%2520inside%2520body%29%2520--%253E%250A%2520%2520%2520%2520%253Cli%2520class%253D%2522dropdown%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Ca%2520href%253D%2522javascript%253Avoid%280%29%2522%2520class%253D%2522dropbtn%2522%253EDropdown%253C%252Fa%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522dropdown-content%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Ca%2520href%253D%2522%2523link1%2522%253ELink%25201%253C%252Fa%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Ca%2520href%253D%2522%2523link2%2522%253ELink%25202%253C%252Fa%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Ca%2520href%253D%2522%2523link3%2522%253ELink%25203%253C%252Fa%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%253C%252Fli%253E"
+                    style="border:0; transform: scale(1); overflow:hidden;"
+                    sandbox="allow-scripts allow-same-origin">
+                </iframe>
+              </div>
+        </div>
+
+
+        <p>CSS for Dropdown</p>
+        
+        <div class="code_container container mb-5 rounded-3">
+            <div style="padding-bottom:31%; position:relative; display:block; width: 100%">
+                <iframe width="100%" height="100%" frameborder="0" style="position:absolute; top:0; left:0" src="https://carbon.now.sh/embed?bg=rgba%28255%2C233%2C236%2C1%29&t=seti&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%252F*%2520Css%2520for%2520Dropdown%2520*%252F%250A.dropdown-content%2520%257B%250A%2520%2520%2520%2520display%253A%2520none%253B%250A%2520%2520%2520%2520position%253A%2520absolute%253B%250A%2520%2520%2520%2520background-color%253A%2520%2523f9f9f9%253B%250A%2520%2520%2520%2520min-width%253A%2520160px%253B%250A%2520%2520%2520%2520box-shadow%253A%25200px%25208px%252016px%25200px%2520rgba%280%252C0%252C0%252C0.2%29%253B%250A%2520%2520%2520%2520z-index%253A%25201%253B%250A%257D%250A.dropdown%253Ahover%2520.dropdown-content%2520%257B%250A%2520%2520%2520%2520display%253A%2520block%253B%250A%257D"
+                    style="border:0; transform: scale(1); overflow:hidden;"
+                    sandbox="allow-scripts allow-same-origin">
+                </iframe>
+              </div>
+        </div>
+
+        <p>
+          <ul>
+              <li><code>position: absolute</code>: Positions the dropdown content absolutely within its container.</li>
+              <li><code>list-style-type</code>: Sets a minimum width for the dropdown content.</li>
+              <li><code>overflow: hidden</code>: Adds a shadow effect for depth.</li>
+              <li><code>float: left</code>: Displays the dropdown content when hovering over the dropdown button.</li>
+          </ul>
+      </p>
+
+        <!-- Navbar-guide JavaScript Enchancements-->
+
+      <h3 class="mt-5">JavaScript Enhancements</h3>
+      <p>For dynamic interaction, JavaScript can be used to toggle dropdown visibility on click:</p>
+
+      <div class="code_container container mb-5 rounded-3">
+        <div style="padding-bottom:20%; position:relative; display:block; width: 100%">
+            <iframe width="100%" height="100%" frameborder="0" style="position:absolute; top:0; left:0" src="https://carbon.now.sh/embed?bg=rgba%28255%2C233%2C236%2C1%29&t=seti&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%252F%252F%2520JavaScript%2520Enhancements%250Adocument.querySelector%28%27.dropdown%27%29.addEventListener%28%27click%27%252C%2520function%28%29%2520%257B%250A%2520%2520%2520%2520this.querySelector%28%27.dropdown-content%27%29.classList.toggle%28%27show%27%29%253B%250A%257D%29%253B"
+                style="border:0; transform: scale(1); overflow:hidden;"
+                sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+      </div>
+
+
+      <p>
+        <ul>
+            <li><code>querySelector</code>: Selects the dropdown element.</li>
+            <li><code>addEventListener</code>: Adds an event listener for the 'click' event.</li>
+            <li><code>classList.toggle</code>: Toggles the 'show' class on the dropdown content.</li>
+        </ul>
+      </p>
+
+        <!-- Navbar-guide Accessibility Considerations-->
+
+      <h3 class="mt-5">Accessibility Considerations</h3>
+      <p>Accessibility is crucial for ensuring that your navigation bar is usable by everyone, including those with disabilities. Use ARIA roles and properties to enhance accessibility:</p>
+
+      <div class="code_container container mb-5 rounded-3">
+        <div style="padding-bottom:25%; position:relative; display:block; width: 100%">
+            <iframe width="100%" height="100%" frameborder="0" style="position:absolute; top:0; left:0" src="https://carbon.now.sh/embed?bg=rgba%28255%2C233%2C236%2C1%29&t=seti&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%21--%2520Accessibility%2520Considerations%2520%28This%2520is%2520placed%2520inside%2520body%29%2520--%253E%250A%2520%2520%2520%2520%253Cnav%2520role%253D%2522navigation%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cul%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cli%253E%253Ca%2520href%253D%2522%2523home%2522%2520aria-label%253D%2522Home%2522%253EHome%253C%252Fa%253E%253C%252Fli%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%21--%2520other%2520links%2520--%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Ful%253E%250A%2520%2520%2520%2520%253C%252Fnav%253E"
+                style="border:0; transform: scale(1); overflow:hidden;"
+                sandbox="allow-scripts allow-same-origin">
+            </iframe>
+          </div>
+      </div>
+
+
+      <p>
+        <ul>
+            <li><code>role="navigation</code>: Defines the section as a navigation region.</li>
+            <li><code>aria-label</code>: Provides an accessible name for the link.</li>
+        </ul>
+      </p>
+
+
+    </div>
+
+      <!-- ELABORATION SECTION 2 -->
+
+      <div class="about w-100 py-5 mb-5">
+        <div class="container">
+
+          <!-- Navbar-guide Examples-->
+
+            <h3 class="mb-3">Examples</h3>
+            <p>Explore different styles of navigation bars and download ready-to-use templates to get started quickly: <br> 
+              <ul>
+                <li>Horizontal Navbars</li>
+                <li>Vertical Navbars</li>
+                <li>Fixed and Sticky Navbars</li>
+              </ul>
+            </p>
+        </div>
+
+        <div class="container">
+
+          <!-- Navbar-guide Troubleshooting-->
+
+          <h3 class="mb-3">Troubleshooting</h3>
+          <p>Having trouble with your navigation bar? Here are solutions to common issues: <br> 
+            <ul>
+              <li>Links not aligning correctly: Check your CSS float and padding values.</li>
+              <li>Dropdown not working: Ensure JavaScript is properly linked and debug any errors.</li>
+              <li>Responsive design issues: Verify your media queries are correctly set up.</li>
+            </ul>
+          </p>
+      </div>
+
+      <div class="container">
+
+        <!-- Navbar-guide Conclusion-->
+
+        <h3 class="mb-3">Conclusion</h3>
+        <p>Having trouble with your navigation bar? Here are solutions to common issues: <br> 
+          In this guide, we've covered the essentials and advanced features of creating a navigation bar. By following these steps, you can build a user-friendly and visually appealing navbar for your website. Ready for more? Check out our next topic on building responsive layouts and further enhance your web design skills!
+        </p>
+    </div>
+
+      </div>
+
+        <img id="navbar-image" class="mb-5" src="images/navbar-example.png" alt="">
+
+      <!-- VIDEO SECTION -->
+
+      <div class="container">
+        <h1 class="text-center mb-3">VIDEO GUIDE</h1>
+        <h3 class="text-center mb-5">Another way to code it</h3>
+      </div>
+
+      <div class="container">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/MgAFnTjESAE" allowfullscreen></iframe>
+          </div>
+      </div>
+
+      <!-- QUIZ SECTION -->
+
+      <div class="container my-5">
+        <div class="quiz w-100 py-5 rounded-3">
+                <h3 class="mb-3 px-5">Want to test yourself? <br>
+                    Take our quiz here!</h3>
+                    <button class="mx-5"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfChXXVB4toAUPBGkdfxEa6pLSLcStxj2IYOoUorhfvRNhbyA/viewform?usp=sf_link" target="_blank">Quiz yourself</a></button>
+          </div>
+      </div>
+
+    
+
+      <!-- FOOTER SECTION -->
+
+      <footer class="footer text-center text-lg-start mt-5">
+        <div class="container d-flex justify-content-center pt-5">
+            <h5>© 2024 Girlcode</h5>
+        </div>
+        <div class="container d-flex justify-content-center">
+            <p>Follow us on social media:</p>
+        </div>
+        <div class="container d-flex justify-content-center pb-5">
+          <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #ffffff00; border-color: #ffffff00; color: #006798;">
+            <i class="bi bi-facebook"></i>
+          </button>
+          <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #ffffff00; border-color: #ffffff00; color: #006798;">
+            <i class="bi bi-instagram"></i>
+          </button>
+          <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #ffffff00; border-color: #ffffff00; color: #006798;">
+            <i class="bi bi-tiktok"></i>
+          </button>
+          <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #ffffff00; border-color: #ffffff00; color: #006798;">
+            <i class="bi bi-youtube"></i>
+          </button>
+        </div>
+      </footer>
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

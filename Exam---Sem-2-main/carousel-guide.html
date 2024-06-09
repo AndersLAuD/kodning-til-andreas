@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap icon CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Link til eget stylesheet -->
+    <link rel="stylesheet" href="bootstrap-style.css">
+    <!-- Link til google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+    <title>Girlcode</title>
+  </head>
+  <body>
+
+    <!-- NAVBAR SECTION -->
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img style="width: 20lvh;" src="images/logo.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a id="navbar_home" class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Guides</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a id="navbar_navbar" class="dropdown-item" href="navbar-guide.html">Navigation bar</a></li>
+                <li><a id="navbar_carousel" class="dropdown-item" href="carousel-guide.html">Carousel</a></li>
+                <li><a id="navbar_hosting" class="dropdown-item" href="hosting-guide.html">Hosting</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a id="navbar_other" class="dropdown-item" href="index.html">Other guides</a></li>
+              </ul>
+            <li class="nav-item">
+              <a id="navbar_about" class="nav-link active" aria-current="page" href="about.html">About us</a>
+            </li>
+
+            <button class="lang-button-eng mx-1" onclick="changeLanguage('en')"></button>
+            <button class="lang-button-dk mx-1" onclick="changeLanguage('dk')"></button>
+            
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+      <!-- HEADLINE SECTION -->
+
+      <div class="container mt-5 mb-5">
+        <h1 id="headline_heading" class="text-center">CAROUSEL</h1>
+        <p id="headline_text">Welcome to our guide on how to code a carousel! A carousel, also known as a slider, is a rotating set of images or content that can add a dynamic and interactive element to your website. This tutorial will walk you through creating a simple, functional carousel using HTML, CSS, and JavaScript.</p>
+    </div>
+
+
+      <!-- ELABORATION SECTION 1 -->
+
+      <div class="container mb-3">
+        <h1 id="elaboration_heading" class="text-center">ELABORATION</h1>
+
+        <!-- Carousel-guide prereq -->
+        <h3 id="prereq_heading">Prerequisites</h3>
+        <p id="prereq_text">
+          Before we start, ensure you have the following skills and tools:
+
+                <!-- Carousel-guide Skills Required-->
+          <h5 id="skills_subheading">Skills Required:</h5>
+            <li id="skills_text">Basic knowledge of HTML, CSS, and JavaScript.</li> <br>
+
+                <!-- Carousel-guide Tools and Libaries-->
+          <h5 id="tools_subheading">Tools and Libraries:</h5>
+            <li id="tools_list1">A text editor (e.g., VS Code, Sublime Text).</li>
+            <li id="tools_list2">Basic understanding of web development.</li>
+            <br>
+      </p>
+
+
+        <!-- Carousel-guide Setting up the enviroment-->
+        <h3 id="enviroment_heading">Setting Up the Environment</h3><br>
+        <h5 id="enviroment_subheading">Project Structure</h5>
+        <p id="enviroment_text">
+          Create a new folder for your project and organize it as follows:
+          <img id="carousel-image" class="mb-5" src="images/carousel_structure.png" alt="">
+          </p>
+          <h5 id="boiler_subheading">HTML Boilerplate</h5>
+            <li id="boiler_text">Start by setting up a basic HTML structure in index.html:</li> <br>
+
+            <div class="code_container container mb-5 rounded-3">
+                <div style="padding-bottom:29%; position:relative; display:block; width: 100%">
+                    <iframe width="100%" height="100%" frameborder="0" style="position:absolute; top:0; left:0" src="https://carbon.now.sh/embed?bg=rgba%28255%2C233%2C236%2C1%29&t=seti&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%21DOCTYPE%2520html%253E%250A%253C%21--%2520HTML%2520Boilerplate%2520--%253E%250A%253Chtml%2520lang%253D%2522en%2522%253E%250A%253Chead%253E%250A%2520%2520%2520%2520%253Cmeta%2520charset%253D%2522UTF-8%2522%253E%250A%2520%2520%2520%2520%253Cmeta%2520name%253D%2522viewport%2522%2520content%253D%2522width%253Ddevice-width%252C%2520initial-scale%253D1.0%2522%253E%250A%2520%2520%2520%2520%253Ctitle%253ECarousel%2520Example%253C%252Ftitle%253E%250A%2520%2520%2520%2520%253Clink%2520rel%253D%2522stylesheet%2522%2520href%253D%2522styles.css%2522%253E%250A%253C%252Fhead%253E%250A%253Cbody%253E"
+                        style="border:0; transform: scale(1); overflow:hidden;"
+                        sandbox="allow-scripts allow-same-origin">
+                    </iframe>
+                  </div>
+            </div>
+
+
+          <!-- Carousel-guide HTML Markup-->
+          <h3 id="markup_heading">HTML Markup</h3>
+          <h5 id="markup_subheading">Creating the Carousel Structure</h5>
+          <p id="markup_text">Add the following HTML inside the <code>&lt;body&gt;</code> tags to define the structure of the carousel:</p>
+
+          <div class="code_container container mb-5 rounded-3">
+            <div style="padding-bottom:56%; position:relative; display:block; width: 100%">
+                <iframe width="100%" height="100%" frameborder="0" style="position:absolute; top:0; left:0" src="https://carbon.now.sh/embed?bg=rgba%28255%2C233%2C236%2C1%29&t=seti&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%21DOCTYPE%2520html%253E%250A%253C%21--%2520HTML%2520Boilerplate%2520--%253E%250A%253Chtml%2520lang%253D%2522en%2522%253E%250A%253Chead%253E%250A%2520%2520%2520%2520%253Cmeta%2520charset%253D%2522UTF-8%2522%253E%250A%2520%2520%2520%2520%253Cmeta%2520name%253D%2522viewport%2522%2520content%253D%2522width%253Ddevice-width%252C%2520initial-scale%253D1.0%2522%253E%250A%2520%2520%2520%2520%253Ctitle%253ECarousel%2520Example%253C%252Ftitle%253E%250A%2520%2520%2520%2520%253Clink%2520rel%253D%2522stylesheet%2522%2520href%253D%2522styles.css%2522%253E%250A%253C%252Fhead%253E%250A%253Cbody%253E%250A%250A%253Cdiv%2520class%253D%2522carousel%2522%253E%250A%2520%2520%2520%2520%253Cdiv%2520class%253D%2522carousel-item%2520active%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cimg%2520src%253D%2522image1.jpg%2522%2520alt%253D%2522Image%25201%2522%253E%250A%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%253Cdiv%2520class%253D%2522carousel-item%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cimg%2520src%253D%2522image2.jpg%2522%2520alt%253D%2522Image%25202%2522%253E%250A%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%253Cdiv%2520class%253D%2522carousel-item%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cimg%2520src%253D%2522image3.jpg%2522%2520alt%253D%2522Image%25203%2522%253E%250A%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%253Cbutton%2520class%253D%2522carousel-control-prev%2522%253E%2526lt%253B%253C%252Fbutton%253E%250A%2520%2520%2520%2520%253Cbutton%2520class%253D%2522carousel-control-next%2522%253E%2526gt%253B%253C%252Fbutton%253E%250A%253C%252Fdiv%253E%250A%250A%253Cscript%2520src%253D%2522script.js%2522%253E%253C%252Fscript%253E%250A%253C%252Fbody%253E%250A%253C%252Fhtml%253E"
+                    style="border:0; transform: scale(1); overflow:hidden;"
+                    sandbox="allow-scripts allow-same-origin">
+                </iframe>
+              </div>
+        </div>
+
+          <!-- Carousel-guide Styling with CSS-->
+          <h3 id="styling_heading">Styling with CSS</h3>
+          <h5 id="styling_subheading">Basic Styles</h5>
+          <p id="styling_text">Create a styles.css file and add the following CSS to style the carousel:</p>
+
+          <div class="code_container container mb-5 rounded-3">
+            <div style="padding-bottom:75%; position:relative; display:block; width: 100%">
+                <iframe width="100%" height="100%" frameborder="0" style="position:absolute; top:0; left:0" src="https://carbon.now.sh/embed?bg=rgba%28255%2C233%2C236%2C1%29&t=seti&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%252F*%2520Styling%2520with%2520CSS%2520*%252F%250A%252F*%2520Basic%2520Styles%2520*%252F%250A.carousel%2520%257B%250A%2520%2520%2520%2520position%253A%2520relative%253B%250A%2520%2520%2520%2520width%253A%2520100%2525%253B%250A%2520%2520%2520%2520max-width%253A%2520600px%253B%250A%2520%2520%2520%2520margin%253A%2520auto%253B%250A%2520%2520%2520%2520overflow%253A%2520hidden%253B%250A%257D%250A%250A.carousel-item%2520%257B%250A%2520%2520%2520%2520display%253A%2520none%253B%250A%2520%2520%2520%2520width%253A%2520100%2525%253B%250A%257D%250A%250A.carousel-item.active%2520%257B%250A%2520%2520%2520%2520display%253A%2520block%253B%250A%257D%250A%250A.carousel%2520img%2520%257B%250A%2520%2520%2520%2520width%253A%2520100%2525%253B%250A%257D%250A%250A.carousel-control-prev%252C%2520.carousel-control-next%2520%257B%250A%2520%2520%2520%2520position%253A%2520absolute%253B%250A%2520%2520%2520%2520top%253A%252050%2525%253B%250A%2520%2520%2520%2520transform%253A%2520translateY%28-50%2525%29%253B%250A%2520%2520%2520%2520background-color%253A%2520rgba%280%252C0%252C0%252C0.5%29%253B%250A%2520%2520%2520%2520color%253A%2520white%253B%250A%2520%2520%2520%2520border%253A%2520none%253B%250A%2520%2520%2520%2520padding%253A%252010px%253B%250A%2520%2520%2520%2520cursor%253A%2520pointer%253B%250A%257D%250A%250A.carousel-control-prev%2520%257B%250A%2520%2520%2520%2520left%253A%252010px%253B%250A%257D%250A%250A.carousel-control-next%2520%257B%250A%2520%2520%2520%2520right%253A%252010px%253B%250A%257D"
+                    style="border:0; transform: scale(1); overflow:hidden;"
+                    sandbox="allow-scripts allow-same-origin">
+                </iframe>
+              </div>
+        </div>
+
+
+          <!-- Carousel-guide Adding JavaScript Functionality-->
+          <h3 id="functionality_heading">Adding JavaScript Functionality</h3>
+          <h5 id="functionality_subheading">Basic Functionality</h5>
+          <p id="functionality_text">Create a script.js file and add the following JavaScript to handle the carousel functionality:</p>
+
+          <div class="code_container container mb-5 rounded-3">
+            <div style="padding-bottom:44%; position:relative; display:block; width: 100%">
+                <iframe width="100%" height="100%" frameborder="0" style="position:absolute; top:0; left:0" src="https://carbon.now.sh/embed?bg=rgba%28255%2C233%2C236%2C1%29&t=seti&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%252F%252FAdding%2520JavaScript%2520Functionality%250A%250A%252F%252FBasic%2520Functionality%250Aconst%2520nextButton%2520%253D%2520document.querySelector%28%27.carousel-control-next%27%29%253B%250Aconst%2520prevButton%2520%253D%2520document.querySelector%28%27.carousel-control-prev%27%29%253B%250Aconst%2520items%2520%253D%2520document.querySelectorAll%28%27.carousel-item%27%29%253B%250A%250Alet%2520currentIndex%2520%253D%25200%253B%250A%250AnextButton.addEventListener%28%27click%27%252C%2520%28%29%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520items%255BcurrentIndex%255D.classList.remove%28%27active%27%29%253B%250A%2520%2520%2520%2520currentIndex%2520%253D%2520%28currentIndex%2520%252B%25201%29%2520%2525%2520items.length%253B%250A%2520%2520%2520%2520items%255BcurrentIndex%255D.classList.add%28%27active%27%29%253B%250A%257D%29%253B%250A%250AprevButton.addEventListener%28%27click%27%252C%2520%28%29%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520items%255BcurrentIndex%255D.classList.remove%28%27active%27%29%253B%250A%2520%2520%2520%2520currentIndex%2520%253D%2520%28currentIndex%2520-%25201%2520%252B%2520items.length%29%2520%2525%2520items.length%253B%250A%2520%2520%2520%2520items%255BcurrentIndex%255D.classList.add%28%27active%27%29%253B%250A%257D%29%253B"
+                    style="border:0; transform: scale(1); overflow:hidden;"
+                    sandbox="allow-scripts allow-same-origin">
+                </iframe>
+              </div>
+          </div>
+
+
+          <!-- Carousel-guide Enhancements-->
+          <h3 id="enhancements_heading">Enhancements</h3>
+          <h5 id="enhancements_subheading">Auto-Sliding</h5>
+          <p id="enhancements_text">To add auto-sliding functionality, modify your JavaScript as follows:</p>
+
+          <div class="code_container container mb-5 rounded-3">
+            <div style="padding-bottom:44%; position:relative; display:block; width: 100%">
+                <iframe width="100%" height="100%" frameborder="0" style="position:absolute; top:0; left:0" src="https://carbon.now.sh/embed?bg=rgba%28255%2C233%2C236%2C1%29&t=seti&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%252F%252FBasic%2520Functionality%250Aconst%2520nextButton%2520%253D%2520document.querySelector%28%27.carousel-control-next%27%29%253B%250Aconst%2520prevButton%2520%253D%2520document.querySelector%28%27.carousel-control-prev%27%29%253B%250Aconst%2520items%2520%253D%2520document.querySelectorAll%28%27.carousel-item%27%29%253B%250A%250Alet%2520currentIndex%2520%253D%25200%253B%250A%250AnextButton.addEventListener%28%27click%27%252C%2520%28%29%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520items%255BcurrentIndex%255D.classList.remove%28%27active%27%29%253B%250A%2520%2520%2520%2520currentIndex%2520%253D%2520%28currentIndex%2520%252B%25201%29%2520%2525%2520items.length%253B%250A%2520%2520%2520%2520items%255BcurrentIndex%255D.classList.add%28%27active%27%29%253B%250A%257D%29%253B%250A%250AprevButton.addEventListener%28%27click%27%252C%2520%28%29%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520items%255BcurrentIndex%255D.classList.remove%28%27active%27%29%253B%250A%2520%2520%2520%2520currentIndex%2520%253D%2520%28currentIndex%2520-%25201%2520%252B%2520items.length%29%2520%2525%2520items.length%253B%250A%2520%2520%2520%2520items%255BcurrentIndex%255D.classList.add%28%27active%27%29%253B%250A%257D%29%253B%250A%250A%252F%252FEnhancements%250A%250A%252F%252FAuto-Sliding%250Alet%2520autoSlideInterval%2520%253D%2520setInterval%28%28%29%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520nextButton.click%28%29%253B%250A%257D%252C%25203000%29%253B%250A%250A%252F%252F%2520Pause%2520on%2520hover%250Aconst%2520carousel%2520%253D%2520document.querySelector%28%27.carousel%27%29%253B%250Acarousel.addEventListener%28%27mouseenter%27%252C%2520%28%29%2520%253D%253E%2520clearInterval%28autoSlideInterval%29%29%253B%250Acarousel.addEventListener%28%27mouseleave%27%252C%2520%28%29%2520%253D%253E%2520autoSlideInterval%2520%253D%2520setInterval%28%28%29%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520nextButton.click%28%29%253B%250A%257D%252C%25203000%29%29%253B"
+                    style="border:0; transform: scale(1); overflow:hidden;"
+                    sandbox="allow-scripts allow-same-origin">
+                </iframe>
+              </div>
+          </div>
+
+
+          <h5 id="indicators_heading">Indicators</h5>
+          <p id="indicators_text">Add indicators for each slide and update your HTML and JavaScript:</p>
+          <p id="indicators_html_title">Html:</p>
+
+          <div class="code_container container mb-5 rounded-3">
+            <div style="padding-bottom:23%; position:relative; display:block; width: 100%">
+                <iframe width="100%" height="100%" frameborder="0" style="position:absolute; top:0; left:0" src="https://carbon.now.sh/embed?bg=rgba%28255%2C233%2C236%2C1%29&t=seti&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%21--%2520%2520Indicators%2520%28This%2520is%2520placed%2520inside%2520body%29%2520--%253E%250A%253Cdiv%2520class%253D%2522carousel-indicators%2522%253E%250A%2520%2520%2520%2520%253Cspan%2520class%253D%2522indicator%2520active%2522%2520data-index%253D%25220%2522%253E%253C%252Fspan%253E%250A%2520%2520%2520%2520%253Cspan%2520class%253D%2522indicator%2522%2520data-index%253D%25221%2522%253E%253C%252Fspan%253E%250A%2520%2520%2520%2520%253Cspan%2520class%253D%2522indicator%2522%2520data-index%253D%25222%2522%253E%253C%252Fspan%253E%250A%253C%252Fdiv%253E"
+                    style="border:0; transform: scale(1); overflow:hidden;"
+                    sandbox="allow-scripts allow-same-origin">
+                </iframe>
+              </div>
+          </div>
+
+          <p id="indicators_javascript_title">JavaScript:</p>
+
+          <div class="code_container container mb-5 rounded-3">
+            <div style="padding-bottom:23%; position:relative; display:block; width: 100%">
+                <iframe width="100%" height="100%" frameborder="0" style="position:absolute; top:0; left:0" src="https://carbon.now.sh/embed?bg=rgba%28255%2C233%2C236%2C1%29&t=seti&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%252F%252FIndicators%250Aconst%2520indicators%2520%253D%2520document.querySelectorAll%28%27.indicator%27%29%253B%250A%250Aindicators.forEach%28indicator%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520indicator.addEventListener%28%27click%27%252C%2520%28%29%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520items%255BcurrentIndex%255D.classList.remove%28%27active%27%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520indicators%255BcurrentIndex%255D.classList.remove%28%27active%27%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520currentIndex%2520%253D%2520parseInt%28indicator.getAttribute%28%27data-index%27%29%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520items%255BcurrentIndex%255D.classList.add%28%27active%27%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520indicators%255BcurrentIndex%255D.classList.add%28%27active%27%29%253B%250A%2520%2520%2520%2520%257D%29%253B%250A%257D%29%253B"
+                    style="border:0; transform: scale(1); overflow:hidden;"
+                    sandbox="allow-scripts allow-same-origin">
+                </iframe>
+              </div>
+          </div>
+
+          <!-- Carousel-guide Advanced Features-->
+          <h3 id="advanced_heading">Advanced Features</h3>
+          <h5 id="advanced_subheading">Using a Library</h5>
+          <p id="advanced_text">For more advanced carousels, consider using libraries like Slick, Swiper, or Bootstrap. Here’s a brief example using Bootstrap’s carousel component:
+          </p>
+          <h5 id="advanced_1_subheading">1. Include Bootstrap:</h5>
+          <p id="advanced_1_text">Add the following in the <code>&lt;head&gt;</code> section of your HTML file:</p>
+
+          <div class="code_container container mb-5 rounded-3">
+            <div style="padding-bottom:22%; position:relative; display:block; width: 100%">
+                <iframe width="100%" height="100%" frameborder="0" style="position:absolute; top:0; left:0" src="https://carbon.now.sh/embed?bg=rgba%28255%2C233%2C236%2C1%29&t=seti&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%21--%2520%2520Include%2520Bootstrap%2520%28This%2520is%2520placed%2520inside%2520head%29%2520--%253E%250A%253Clink%2520rel%253D%2522stylesheet%2522%2520href%253D%2522https%253A%252F%252Fstackpath.bootstrapcdn.com%252Fbootstrap%252F4.5.2%252Fcss%252Fbootstrap.min.css%2522%253E%250A%253Cscript%2520src%253D%2522https%253A%252F%252Fcode.jquery.com%252Fjquery-3.5.1.slim.min.js%2522%253E%253C%252Fscript%253E%250A%253Cscript%2520src%253D%2522https%253A%252F%252Fcdn.jsdelivr.net%252Fnpm%252F%2540popperjs%252Fcore%25402.9.3%252Fdist%252Fumd%252Fpopper.min.js%2522%253E%253C%252Fscript%253E%250A%253Cscript%2520src%253D%2522https%253A%252F%252Fstackpath.bootstrapcdn.com%252Fbootstrap%252F4.5.2%252Fjs%252Fbootstrap.min.js%2522%253E%253C%252Fscript%253E"
+                    style="border:0; transform: scale(1); overflow:hidden;"
+                    sandbox="allow-scripts allow-same-origin">
+                </iframe>
+              </div>
+          </div>
+
+
+          <h5 id="advanced_2_subheading">2. Bootstrap Carousel Markup:</h5>
+
+          <div class="code_container container mb-5 rounded-3">
+            <div style="padding-bottom:54%; position:relative; display:block; width: 100%">
+                <iframe width="100%" height="100%" frameborder="0" style="position:absolute; top:0; left:0" src="https://carbon.now.sh/embed?bg=rgba%28255%2C233%2C236%2C1%29&t=seti&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%21--%2520Bootstrap%2520Carousel%2520Markup%2520%28This%2520is%2520placed%2520inside%2520body%29--%253E%250A%253Cdiv%2520id%253D%2522carouselExampleIndicators%2522%2520class%253D%2522carousel%2520slide%2522%2520data-ride%253D%2522carousel%2522%253E%250A%2520%2520%2520%2520%253Col%2520class%253D%2522carousel-indicators%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cli%2520data-target%253D%2522%2523carouselExampleIndicators%2522%2520data-slide-to%253D%25220%2522%2520class%253D%2522active%2522%253E%253C%252Fli%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cli%2520data-target%253D%2522%2523carouselExampleIndicators%2522%2520data-slide-to%253D%25221%2522%253E%253C%252Fli%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cli%2520data-target%253D%2522%2523carouselExampleIndicators%2522%2520data-slide-to%253D%25222%2522%253E%253C%252Fli%253E%250A%2520%2520%2520%2520%253C%252Fol%253E%250A%2520%2520%2520%2520%253Cdiv%2520class%253D%2522carousel-inner%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522carousel-item%2520active%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cimg%2520src%253D%2522image1.jpg%2522%2520class%253D%2522d-block%2520w-100%2522%2520alt%253D%2522...%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522carousel-item%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cimg%2520src%253D%2522image2.jpg%2522%2520class%253D%2522d-block%2520w-100%2522%2520alt%253D%2522...%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522carousel-item%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cimg%2520src%253D%2522image3.jpg%2522%2520class%253D%2522d-block%2520w-100%2522%2520alt%253D%2522...%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%253Ca%2520class%253D%2522carousel-control-prev%2522%2520href%253D%2522%2523carouselExampleIndicators%2522%2520role%253D%2522button%2522%2520data-slide%253D%2522prev%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cspan%2520class%253D%2522carousel-control-prev-icon%2522%2520aria-hidden%253D%2522true%2522%253E%253C%252Fspan%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cspan%2520class%253D%2522sr-only%2522%253EPrevious%253C%252Fspan%253E%250A%2520%2520%2520%2520%253C%252Fa%253E%250A%2520%2520%2520%2520%253Ca%2520class%253D%2522carousel-control-next%2522%2520href%253D%2522%2523carouselExampleIndicators%2522%2520role%253D%2522button%2522%2520data-slide%253D%2522next%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cspan%2520class%253D%2522carousel-control-next-icon%2522%2520aria-hidden%253D%2522true%2522%253E%253C%252Fspan%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cspan%2520class%253D%2522sr-only%2522%253ENext%253C%252Fspan%253E%250A%2520%2520%2520%2520%253C%252Fa%253E%250A%253C%252Fdiv%253E"
+                    style="border:0; transform: scale(1); overflow:hidden;"
+                    sandbox="allow-scripts allow-same-origin">
+                </iframe>
+              </div>
+          </div>
+
+          <!-- Carousel-guide What the final code should look like-->
+          <h2 id="should_heading" class="text-center mb-3">What the final code should look like with bootstrap</h2>
+
+          <div class="code_container container mb-5 rounded-3">
+            <div style="padding-bottom:100%; position:relative; display:block; width: 100%">
+                <iframe width="100%" height="100%" frameborder="0" style="position:absolute; top:0; left:0" src="https://carbon.now.sh/embed?bg=rgba%28255%2C233%2C236%2C1%29&t=seti&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%21DOCTYPE%2520html%253E%250A%253C%21--%2520HTML%2520Boilerplate%2520--%253E%250A%253Chtml%2520lang%253D%2522en%2522%253E%250A%253Chead%253E%250A%2520%2520%2520%2520%253Cmeta%2520charset%253D%2522UTF-8%2522%253E%250A%2520%2520%2520%2520%253Cmeta%2520name%253D%2522viewport%2522%2520content%253D%2522width%253Ddevice-width%252C%2520initial-scale%253D1.0%2522%253E%250A%2520%2520%2520%2520%253Ctitle%253ECarousel%2520Example%253C%252Ftitle%253E%250A%2520%2520%2520%2520%253Clink%2520rel%253D%2522stylesheet%2522%2520href%253D%2522styles.css%2522%253E%250A%253C%252Fhead%253E%250A%253Cbody%253E%250A%250A%253Cdiv%2520class%253D%2522carousel%2522%253E%250A%2520%2520%2520%2520%253Cdiv%2520class%253D%2522carousel-item%2520active%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cimg%2520src%253D%2522image1.jpg%2522%2520alt%253D%2522Image%25201%2522%253E%250A%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%253Cdiv%2520class%253D%2522carousel-item%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cimg%2520src%253D%2522image2.jpg%2522%2520alt%253D%2522Image%25202%2522%253E%250A%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%253Cdiv%2520class%253D%2522carousel-item%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cimg%2520src%253D%2522image3.jpg%2522%2520alt%253D%2522Image%25203%2522%253E%250A%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%253Cbutton%2520class%253D%2522carousel-control-prev%2522%253E%2526lt%253B%253C%252Fbutton%253E%250A%2520%2520%2520%2520%253Cbutton%2520class%253D%2522carousel-control-next%2522%253E%2526gt%253B%253C%252Fbutton%253E%250A%253C%252Fdiv%253E%250A%250A%253Cscript%2520src%253D%2522script.js%2522%253E%253C%252Fscript%253E%250A%253C%252Fbody%253E%250A%253C%252Fhtml%253E%250A%250A%253C%21--%2520HTML%2520Markup%2520--%253E%250A%253C%21--%2520%2520Creating%2520the%2520Carousel%2520Structure%2520%28This%2520is%2520placed%2520inside%2520body%29%2520--%253E%250A%253Cdiv%2520class%253D%2522carousel%2522%253E%250A%2520%2520%2520%2520%253Cdiv%2520class%253D%2522carousel-item%2520active%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cimg%2520src%253D%2522image1.jpg%2522%2520alt%253D%2522Image%25201%2522%253E%250A%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%253Cdiv%2520class%253D%2522carousel-item%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cimg%2520src%253D%2522image2.jpg%2522%2520alt%253D%2522Image%25202%2522%253E%250A%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%253Cdiv%2520class%253D%2522carousel-item%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cimg%2520src%253D%2522image3.jpg%2522%2520alt%253D%2522Image%25203%2522%253E%250A%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%253Cbutton%2520class%253D%2522carousel-control-prev%2522%253E%2526lt%253B%253C%252Fbutton%253E%250A%2520%2520%2520%2520%253Cbutton%2520class%253D%2522carousel-control-next%2522%253E%2526gt%253B%253C%252Fbutton%253E%250A%253C%252Fdiv%253E%250A%250A%253C%21--%2520%2520Indicators%2520%28This%2520is%2520placed%2520inside%2520body%29%2520--%253E%250A%253Cdiv%2520class%253D%2522carousel-indicators%2522%253E%250A%2520%2520%2520%2520%253Cspan%2520class%253D%2522indicator%2520active%2522%2520data-index%253D%25220%2522%253E%253C%252Fspan%253E%250A%2520%2520%2520%2520%253Cspan%2520class%253D%2522indicator%2522%2520data-index%253D%25221%2522%253E%253C%252Fspan%253E%250A%2520%2520%2520%2520%253Cspan%2520class%253D%2522indicator%2522%2520data-index%253D%25222%2522%253E%253C%252Fspan%253E%250A%253C%252Fdiv%253E%250A%250A%250A%253C%21--%2520Advanced%2520Features%2520--%253E%250A%250A%253C%21--%2520%2520Include%2520Bootstrap%2520%28This%2520is%2520placed%2520inside%2520head%29%2520--%253E%250A%253Clink%2520rel%253D%2522stylesheet%2522%2520href%253D%2522https%253A%252F%252Fstackpath.bootstrapcdn.com%252Fbootstrap%252F4.5.2%252Fcss%252Fbootstrap.min.css%2522%253E%250A%253Cscript%2520src%253D%2522https%253A%252F%252Fcode.jquery.com%252Fjquery-3.5.1.slim.min.js%2522%253E%253C%252Fscript%253E%250A%253Cscript%2520src%253D%2522https%253A%252F%252Fcdn.jsdelivr.net%252Fnpm%252F%2540popperjs%252Fcore%25402.9.3%252Fdist%252Fumd%252Fpopper.min.js%2522%253E%253C%252Fscript%253E%250A%253Cscript%2520src%253D%2522https%253A%252F%252Fstackpath.bootstrapcdn.com%252Fbootstrap%252F4.5.2%252Fjs%252Fbootstrap.min.js%2522%253E%253C%252Fscript%253E%250A%250A%253C%21--%2520Bootstrap%2520Carousel%2520Markup%2520%28This%2520is%2520placed%2520inside%2520b"
+                    style="border:0; transform: scale(1); overflow:hidden;"
+                    sandbox="allow-scripts allow-same-origin">
+                </iframe>
+              </div>
+            </div>
+
+
+      <!-- ELABORATION SECTION 2 -->
+
+      <div class="about w-100 py-5 mb-5">
+        <div class="container">
+          <h3 id="troubleshooting_heading" class="mb-3">Troubleshooting</h3>
+          <h5 id="common_subheading">Common issues</h5>
+         <li id="common_point_1">Images not displaying:</li>
+         <p id="common_text_1">Ensure the image paths are correct and the images are in the appropriate directory.</p>
+         <li id="common_point_2">Carousel not sliding:</li>
+         <p id="common_text_2">Check for JavaScript errors in the console and ensure all event listeners are correctly attached.</p>
+         <h5 id="debug_subheading">Debugging Tips</h5>
+         <li id="debug_point_1">Use browser developer tools to inspect the carousel elements and check for CSS or JavaScript issues.</li>
+         <li id="debug_point_2">Log JavaScript variables and events to the console to trace the flow of your code.</li>
+         <br>
+         <h3 id="conclusion_heading">Conclusion</h3>
+         <p id="conclusion_text">Congratulations! You have successfully created a functional carousel. This guide covered the basics of setting up the HTML, CSS, and JavaScript for a simple carousel, as well as some enhancements to make it more interactive.</p>
+        </div>
+      </div>
+
+      <img id="carousel-image" class="mb-5" src="images/carousel-example.png" alt="">
+
+      <!-- VIDEO SECTION -->
+
+      <div class="container">
+        <h1 id="video_heading" class="text-center mb-3">VIDEO GUIDE</h1>
+        <h3 id="video_subheading" class="text-center mb-5">Another way to code it</h3>
+      </div>
+
+      <div class="container">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/ToD0ykg3f44" allowfullscreen></iframe>
+          </div>
+      </div>
+
+      
+
+      
+
+      <!-- QUIZ SECTION -->
+
+      <div class="container my-5">
+        <div class="quiz w-100 py-5 rounded-3">
+                <h3 id="quiz_heading" class="mb-3 px-5">Want to test yourself? <br>
+                    Take our quiz here!</h3>
+                    <button class="mx-5"><a id="quiz_subheading" href="https://docs.google.com/forms/d/e/1FAIpQLSeG7waVUPSOo1knU2PN5hnUKNpuMGR3UHAaNuXa-iKwUBMpBA/viewform?usp=sf_link" target="_blank">Quiz yourself</a></button>
+          </div>
+      </div>
+
+      
+      
+
+      
+
+
+
+      <!-- FOOTER SECTION -->
+
+      <footer class="footer text-center text-lg-start mt-5">
+        <div class="container d-flex justify-content-center pt-5">
+            <h5>© 2024 Girlcode</h5>
+        </div>
+        <div class="container d-flex justify-content-center">
+            <p id="footer_text">Follow us on social media:</p>
+        </div>
+        <div class="container d-flex justify-content-center pb-5">
+          <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #ffffff00; border-color: #ffffff00; color: #006798;">
+            <i class="bi bi-facebook"></i>
+          </button>
+          <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #ffffff00; border-color: #ffffff00; color: #006798;">
+            <i class="bi bi-instagram"></i>
+          </button>
+          <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #ffffff00; border-color: #ffffff00; color: #006798;">
+            <i class="bi bi-tiktok"></i>
+          </button>
+          <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #ffffff00; border-color: #ffffff00; color: #006798;">
+            <i class="bi bi-youtube"></i>
+          </button>
+        </div>
+      </footer>
+    
+
+         <!-- Optional JavaScript; choose one of the two! -->
+      <script src="javascript/carousel_script.js"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
